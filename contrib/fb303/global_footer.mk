@@ -1,2 +1,0 @@
-thriftstyle : $(XBUILT_SOURCES)
-
