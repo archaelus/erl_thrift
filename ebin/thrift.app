@@ -17,18 +17,35 @@
 %% under the License.
 %%
 %%% -*- mode:erlang -*-
-{application, %APP_NAME%,
+{application, thrift,
  [
   % A quick description of the application.
   {description, "Thrift bindings"},
 
   % The version of the applicaton
-  {vsn, "%VSN%"},
+  {vsn, 0.1},
 
   % All modules used by the application.
   {modules, [
-       %MODULES%
-   ]},
+             thrift_base64_transport
+             ,thrift_binary_protocol
+             ,thrift_buffered_transport
+             ,thrift_client
+             ,thrift_client_util
+             ,thrift_disk_log_transport
+             ,thrift_file_transport
+             ,thrift_framed_transport
+             ,thrift_http_transport
+             ,thrift_memory_buffer
+             ,thrift_processor
+             ,thrift_protocol
+             ,thrift_server
+             ,thrift_service
+             ,thrift_socket_server
+             ,thrift_socket_transport
+             ,thrift_transport
+             ,thrift_transport_state_test
+            ]},
 
   % All of the registered names the application uses. This can be ignored.
   {registered, []},
@@ -54,9 +71,6 @@
          % should the TApplicationException serialized back to the client
          % include the erlang backtrace?
          {exceptions_include_traces, true}
-  ]},
-
-  % The Module and Args used to start this application.
-  {mod, {thrift_app, []}}
+  ]}
  ]
 }.
